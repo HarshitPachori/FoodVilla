@@ -1,7 +1,13 @@
 import React from "react";
+import AppLayout from "./AppLayout";
+import "./App.css";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <AppLayout />
+    </>
+  );
 };
 
 export default App;
