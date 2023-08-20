@@ -1,0 +1,32 @@
+{
+  "name": "foodvilla",
+  "version": "1.0.0",
+  "description": "This is a Food Ordering Website ( Swiggy Clone )",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshitPachori/FoodVilla.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarshitPachori/FoodVilla/issues"
+  },
+  "homepage": "https://github.com/HarshitPachori/FoodVilla#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  }
+}

@@ -1,0 +1,5 @@
+// for removing errors and console logs from the browser in production
+
+// {
+//   "plugins": [["transform-remove-console", { "exclude": ["error", "warn"] }]]
+// }
