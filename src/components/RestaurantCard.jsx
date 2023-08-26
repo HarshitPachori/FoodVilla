@@ -6,6 +6,7 @@ const RestaurantCard = ({
   cuisines,
   totalRatingsString,
   lastMileTravelString,
+  avgRating
 }) => {
   return (
     <div className="restaurant_card">
@@ -17,6 +18,7 @@ const RestaurantCard = ({
         alt=""
       />
       <h3>{name}</h3>
+      <span>{avgRating}</span>
       <div className="restaurant_details">
         <h5>{cuisines.join(", ")}</h5>
         <h5>{lastMileTravelString}</h5>
