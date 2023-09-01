@@ -5,9 +5,21 @@ const Profile = (props) => {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
   useEffect(() => {}); // called for every render
-  useEffect(() => {}, []); // called only one time
+  useEffect(() => {
+    console.log("useEffect0");
+    // const timer = setInter0val(() => {
+    //   console.log("Hello Harshit");
+    // }, 1000);
+
+    return () => {
+      console.log("useEffect return ");
+      // same as component did unmount
+      // clearInterval(timer);
+    };
+  }, []); // called only one time
   useEffect(() => {}, [count]); // called whenever there is change in state for variable count
   useEffect(() => {}, [count2]); // called whenever there is change in state for variable count
+  console.log("render");
   return (
     <>
       <div>

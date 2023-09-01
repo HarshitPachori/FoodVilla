@@ -3,7 +3,7 @@ import React from "react";
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-    console.log("Constructor");
+    // console.log("Constructor");
     // creating state in the constructor bcz it called first when a class loads
     this.state = {
       count: 0,
@@ -28,7 +28,10 @@ class Profile extends React.Component {
   componentDidMount() {
     // best place for api call
     //  called only one time
-    console.log("componentDidMount");
+    // console.log("componentDidMount");
+    // this.timer = setInterval(() => {
+    //   console.log("Hello Harshit");
+    // }, 1000);
     // same as useEffect(() => {}, []);
   }
   componentDidUpdate(prevProps, prevState) {
@@ -39,10 +42,15 @@ class Profile extends React.Component {
       // then here do something
       // same as    useEffect(() => {}, [count]);
     }
-    console.log("component did Update");
+    // console.log("component did Update");
+  }
+
+  componentWillUnmount() {
+    // console.log("unmounting");
+    // clearInterval(this.timer);
   }
   render() {
-    console.log("Render");
+    // console.log("Render");
     return (
       <div>
         <p>Profile class based</p>
