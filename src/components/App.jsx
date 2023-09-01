@@ -8,6 +8,7 @@ import ContactPage from "./ContactPage";
 import AboutPage from "./AboutPage";
 import ErrorPage from "./ErrorPage";
 import RestaurantMenu from "./RestaurantMenu";
+import Profile from "./ProfileFunction";
 // import ShimmerComp from "./ShimmerComp";
 
 const AppLayout = () => {
@@ -37,6 +38,7 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage />,
+        children: [{ path: "profile", element: <Profile /> }],
       },
       {
         path: "/restaurant/:resId",
