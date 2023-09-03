@@ -6,7 +6,7 @@ const Profile = (props) => {
   const [count2, setCount2] = useState(0);
   useEffect(() => {}); // called for every render
   useEffect(() => {
-    console.log("useEffect0");
+    console.log("useEffect");
     // const timer = setInter0val(() => {
     //   console.log("Hello Harshit");
     // }, 1000);

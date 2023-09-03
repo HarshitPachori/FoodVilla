@@ -49,6 +49,7 @@ class Profile extends React.Component {
     // console.log("unmounting");
     // clearInterval(this.timer);
   }
+
   render() {
     // console.log("Render");
     return (

@@ -8,7 +8,7 @@ const AboutPage = () => {
     <div>
       <Outlet/>
       <ProfileFunction name={"Harshit Pachori"} location={"Aligarh"} />
-      <ProfileClass name={"Harshit Pachori"} location={"Aligarh"} />
+      {/* <ProfileClass name={"Harshit Pachori"} location={"Aligarh"} /> */}
       <h1>About us page</h1>
       <h3>This is about us pae of our swiggy clone foodVillla application</h3>
     </div>
