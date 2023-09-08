@@ -1,17 +1,3 @@
-export const FETCH_RES_MENU_URL =
-  "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=27.863869&lng=78.0758905&&submitAction=ENTER&restaurantId=";
-
-export const FETCH_RES_URL =
-  "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.863869&lng=78.0758905&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING";
-
-export const CLOUDINARY_IMG_URL =
-  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-
-export const RESTAURANT_STRING =
-  "type.googleapis.com/swiggy.presentation.food.v2.Restaurant";
-export const ITEM_CATEGORY_STRING =
-  "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
-
 export const restaurantList = [
   {
     type: "restaurant",
@@ -1829,3 +1815,5 @@ export const restaurantList = [
     subtype: "basic",
   },
 ];
+
+

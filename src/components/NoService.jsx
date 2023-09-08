@@ -8,7 +8,7 @@ const NoService = () => {
         alt="NoService"
       />
       <h2>Sorry, no service available</h2>
-      <p>We don’t have any services here at present. Try changing location.</p>
+      <p>We don’t have any services here till now. Try changing location.</p>
     </div>
   );
 };
