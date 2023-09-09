@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { CLOUDINARY_IMG_URL } from "../constants/AppConstants";
-import useRestaurantMenuData from "../utils/useRestaurantMenuData";
+import useRestaurantMenuData from "../utils/custom_hooks/useRestaurantMenuData";
 import ShimmerComponent from "./ShimmerComp";
 import MenuItem from "./MenuItem";
 

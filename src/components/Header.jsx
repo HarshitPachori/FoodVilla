@@ -21,6 +21,9 @@ const Header = () => {
         <li className="font-semibold cursor-pointer hover:text-gray-400">
           <Link to="/">Cart</Link>
         </li>
+        <li className="font-semibold cursor-pointer hover:text-gray-400">
+          <Link to="/instamart">Instamart</Link>
+        </li>
       </ul>
     </nav>
   );

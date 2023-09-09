@@ -8,6 +8,7 @@ import Header from "./Header";
 import ErrorPage from "./ErrorPage";
 // import RestaurantMenu from "./RestaurantMenu";
 import Profile from "./ProfileFunction";
+import InstaMart from "./InstaMart";
 // import ShimmerComp from "./ShimmerComp";
 const AboutPage = lazy(() => import("./AboutPage.jsx"));
 const MainContent = lazy(() => import("./MainContent.jsx"));
@@ -43,6 +44,14 @@ const appRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<div>Component1 are loading please wait...</div>}>
             <ContactPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/instamart",
+        element: (
+          <Suspense fallback={<div>Component1 are loading please wait...</div>}>
+            <InstaMart />
           </Suspense>
         ),
       },

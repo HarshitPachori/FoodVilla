@@ -3,7 +3,7 @@ import {
   FETCH_RES_MENU_URL,
   ITEM_CATEGORY_STRING,
   RESTAURANT_STRING,
-} from "../constants/AppConstants";
+} from "../../constants/AppConstants";
 
 const useRestaurantMenuData = (resId) => {
   const [restaurant, setRestaurant] = useState([]);

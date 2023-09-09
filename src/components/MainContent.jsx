@@ -4,8 +4,8 @@ import NoService from "./NoService";
 import ShimmerComp from "./ShimmerComp";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
-import useRestaurantData from "../utils/useRestaurantData";
-import useOnline from "../utils/useOnline";
+import useRestaurantData from "../utils/custom_hooks/useRestaurantData";
+import useOnline from "../utils/custom_hooks/useOnline";
 import UserOffline from "./UserOffline";
 
 const MainContent = () => {

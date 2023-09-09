@@ -7,7 +7,9 @@ const MenuItem = ({ item }) => {
       <div className="">
         <h1 className="font-semibold text-xl">{item?.name}</h1>
         <h1 className="text-sm">₹{item?.price / 100}</h1>
-        <h1 className="font-light hidden sm:block text-xs w-2/3">{item?.description}</h1>
+        <h1 className="font-light hidden sm:block text-xs w-2/3">
+          {item?.description}
+        </h1>
       </div>
       <img
         className="w-[118px] h-[96px] rounded-lg "
