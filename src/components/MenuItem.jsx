@@ -13,7 +13,11 @@ const MenuItem = ({ item }) => {
       </div>
       <img
         className="w-[118px] h-[96px] rounded-lg "
-        src={CLOUDINARY_IMG_URL + item?.imageId}
+        src={
+          item?.imageId === undefined
+            ? "https://wallpaperaccess.com/full/3025528.jpg"
+            : CLOUDINARY_IMG_URL + item?.imageId
+        }
         alt=""
       />
     </div>

@@ -25,6 +25,11 @@ const Header = () => {
           <Link to="/instamart">Instamart</Link>
         </li>
       </ul>
+      <div className="">
+        <span className="border-b-black"></span>
+        <hr className="border-b-black" />
+        <hr className="border-b-black" />
+      </div>
     </nav>
   );
 };

@@ -7,9 +7,11 @@ import { filterData } from "../utils/helper";
 import useRestaurantData from "../utils/custom_hooks/useRestaurantData";
 import useOnline from "../utils/custom_hooks/useOnline";
 import UserOffline from "./UserOffline";
+import { CLOUDINARY_IMG_URL } from "../constants/AppConstants";
+import OfferCard from "./OfferCard";
 
 const MainContent = () => {
-  const [allRestaurants, filterRes, error] = useRestaurantData();
+  const [allRestaurants, filterRes, allOffers, error] = useRestaurantData();
   const [filteredRestaurants, setFilteredRestaurants] = useState(null);
   const [searchTxt, setSearchTxt] = useState("");
 
@@ -29,7 +31,14 @@ const MainContent = () => {
   if (!allRestaurants) return <NoService />;
 
   return (
-    <div className="bg-blue-50">
+    <div className="">
+      <div className="relative overflow-hidden ">
+        <div className="carousel flex items-center scroll-smooth" id="carousel">
+          {allOffers.map((offer, index) => (
+            <OfferCard offer={offer} key={index} />
+          ))}
+        </div>
+      </div>
       <div className="flex items-center justify-center  p-5">
         <input
           type="text"

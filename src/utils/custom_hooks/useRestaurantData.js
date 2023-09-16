@@ -4,6 +4,7 @@ import { FETCH_RES_URL } from "../../constants/AppConstants";
 const useRestaurantData = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const [allOffers, setAllOffers] = useState([]);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -30,6 +31,18 @@ const useRestaurantData = () => {
             }
           }
         }
+        const offersDataCard = response?.data?.cards
+          ?.map((x) => x.card)
+          .find(
+            (x) =>
+              x.card["@type"] ===
+              "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget"
+          )?.card?.gridElements?.infoWithStyle?.info;
+
+        // console.log(offersDataCard);
+        setAllOffers(offersDataCard);
+        console.log(allOffers);
+
         const resData = await checkResponseData(response);
         setAllRestaurants(resData);
         setFilteredRestaurants(resData);
@@ -39,7 +52,7 @@ const useRestaurantData = () => {
       setError(err.message);
     }
   }
-  return [allRestaurants, filteredRestaurants, error];
+  return [allRestaurants, filteredRestaurants, allOffers, error];
 };
 
 export default useRestaurantData;
