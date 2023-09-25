@@ -1,17 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-
 import store from "../utils/store";
-import { addItem } from "../utils/cartSlice";
 
 const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  const dispatch = useDispatch(addItem);
 
-  const handleClickAddItem = () => {
-    dispatch()
-  };
   return (
     <nav className="flex items-center justify-between p-5 bg-orange-50 sticky top-0 z-10 shadow-md ">
       <h1 className="font-bold tracking-widest text-2xl cursor-pointer ">
@@ -30,13 +24,14 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li className="font-semibold cursor-pointer hover:text-gray-400">
-            <Link to="/cart">Cart - {cartItems.length} items</Link>
+            <Link to="/cart">Cart - {cartItems.length}</Link>
           </li>
           <li className="font-semibold cursor-pointer hover:text-gray-400">
             <Link to="/instamart">Instamart</Link>
           </li>
         </ul>
       </div>
+      <h1>{cartItems}</h1>
       <button className="hover:scale-105 ease-in-out duration-400 sm:hidden">
         <div className="border-b-2 w-5 h-1 border-black"></div>
         <div className="border-b-2 w-5 h-1 border-black"></div>

@@ -1,7 +1,15 @@
 import React from "react";
 import { CLOUDINARY_IMG_URL } from "../constants/AppConstants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const MenuItem = ({ item }) => {
+  const dispatch = useDispatch();
+
+  const handleClickAddItem = () => {
+    dispatch(addItem());
+  };
+  
   return (
     <div className="flex justify-between items-center m-5  w-full space-x-5 ">
       <div className="">
@@ -30,7 +38,10 @@ const MenuItem = ({ item }) => {
           }
           alt=""
         />
-        <button className="bg-green-300  px-2 rounded-md shadow-md absolute -bottom-[10px] hover:scale-110 ease-in-out duration-300">
+        <button
+          className="bg-green-300  px-2 rounded-md shadow-md absolute -bottom-[10px] hover:scale-110 ease-in-out duration-300"
+          onClick={() => handleClickAddItem()}
+        >
           Add Item
         </button>
       </div>
