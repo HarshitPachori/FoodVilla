@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../utils/custom_contexts/UserContext";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -59,6 +60,15 @@ class Profile extends React.Component {
         <h1>Location : {this.props.location} </h1>
         <h3>{this.state.count}</h3>
         <button onClick={() => this.setState({ count: 1 })}>set Count</button>
+
+        <UserContext.Consumer>
+          {({ user }) => (
+            <div className="flex space-x-5 bg-green-800 text-white px-5 py-2 m-2 rounded-lg shadow-md shadow-blue-300 max-w-md">
+              <h1 className="font-semibold tracking-wider">{user.name}</h1>
+              <h1 className="font-semibold tracking-wider">{user.email}</h1>
+            </div>
+          )}
+        </UserContext.Consumer>
       </div>
     );
   }

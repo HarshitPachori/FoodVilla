@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -9,6 +9,10 @@ import ErrorPage from "./ErrorPage";
 // import RestaurantMenu from "./RestaurantMenu";
 import Profile from "./ProfileFunction";
 import InstaMart from "./InstaMart";
+import Cart from "./Cart";
+import UserContext from "../utils/custom_contexts/UserContext";
+import { Provider } from "react-redux";
+import store from "../utils/store";
 // import ShimmerComp from "./ShimmerComp";
 const AboutPage = lazy(() => import("./AboutPage.jsx"));
 const MainContent = lazy(() => import("./MainContent.jsx"));
@@ -16,11 +20,19 @@ const ContactPage = lazy(() => import("./ContactPage.jsx"));
 const RestaurantMenu = lazy(() => import("./RestaurantMenu.jsx"));
 
 const AppLayout = () => {
+  const [user, setUser] = useState({
+    name: "Dummy",
+    email: "dummy@gmail.com",
+  });
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <Provider store={store}>
+        <UserContext.Provider value={{ user: user, setUser: setUser }}>
+          <Header />
+          <Outlet />
+          <Footer />
+        </UserContext.Provider>
+      </Provider>
     </>
   );
 };
@@ -63,6 +75,14 @@ const appRouter = createBrowserRouter([
           </Suspense>
         ),
         children: [{ path: "profile", element: <Profile /> }],
+      },
+      {
+        path: "/cart",
+        element: (
+          <Suspense fallback={<div>Component1 are loading please wait...</div>}>
+            <Cart />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurant/:resId",

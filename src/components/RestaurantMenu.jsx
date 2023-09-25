@@ -47,7 +47,9 @@ const RestaurantMenu = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-evenly">
-        <h1 className="font-semibold p-5 text-xl tracking-widest"> Restaurant Menu</h1>
+        <h1 className="font-semibold p-5 text-xl tracking-widest">
+          Restaurant Menu
+        </h1>
         <div className="menu w-2/3">
           {menuItems?.map((item) => (
             <MenuItem key={item?.id} item={item} />
